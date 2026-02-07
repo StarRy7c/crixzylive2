@@ -25,23 +25,22 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: #000;
             color: #fff;
-            min-height: 100vh;
             overflow-x: hidden;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 15px;
+            padding: 10px 15px;
         }
 
         /* Header Alert */
         .alert-banner {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 12px 20px;
+            padding: 8px 15px;
             text-align: center;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
             animation: slideDown 0.5s ease-out;
             position: relative;
@@ -78,7 +77,7 @@
 
         /* Player Section */
         .player-wrapper {
-            margin: 20px 0;
+            margin: 10px 0;
             animation: fadeIn 0.6s ease-out;
         }
 
@@ -114,30 +113,30 @@
 
         /* Share Buttons Section */
         .share-section {
-            margin: 25px 0;
+            margin: 12px 0;
             animation: fadeIn 0.8s ease-out;
         }
 
         .share-title {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #e0e0e0;
         }
 
         .share-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 8px;
             justify-content: center;
         }
 
         .share-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            font-size: 15px;
+            gap: 6px;
+            padding: 10px 20px;
+            font-size: 14px;
             font-weight: 600;
             color: white;
             border: none;
@@ -179,7 +178,7 @@
 
         /* Telegram Join Button */
         .telegram-join {
-            margin: 30px 0;
+            margin: 12px 0;
             text-align: center;
             animation: fadeIn 1s ease-out;
         }
@@ -187,9 +186,9 @@
         .telegram-join-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
-            font-size: 18px;
+            gap: 8px;
+            padding: 12px 30px;
+            font-size: 15px;
             font-weight: 700;
             color: white;
             background: linear-gradient(135deg, #0088cc 0%, #005f8c 100%);
@@ -208,18 +207,18 @@
 
         /* Search Section */
         .search-section {
-            margin: 40px 0;
-            padding: 30px;
+            margin: 12px 0 15px 0;
+            padding: 20px;
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             animation: fadeIn 1.2s ease-out;
         }
 
         .search-title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -227,14 +226,14 @@
         }
 
         .search-subtitle {
-            font-size: 14px;
+            font-size: 13px;
             color: #aaa;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .search-btn {
-            padding: 14px 35px;
-            font-size: 16px;
+            padding: 12px 30px;
+            font-size: 15px;
             font-weight: 700;
             color: white;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -265,11 +264,11 @@
 
         /* Footer */
         .footer {
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 15px;
+            padding: 15px;
             text-align: center;
             color: #666;
-            font-size: 14px;
+            font-size: 12px;
             border-top: 1px solid #222;
         }
 
@@ -363,20 +362,20 @@
             <div class="search-subtitle">Discover thousands of movies and shows instantly</div>
             
             <a href="https://starry7c.github.io/search-movie/" target="_blank" style="text-decoration: none;">
-                <button class="search-btn" style="width: 100%; padding: 18px 35px; font-size: 18px;">
+                <button class="search-btn" style="width: 100%; padding: 14px 30px; font-size: 16px;">
                     🎬 Search Movies & TV Shows
                 </button>
             </a>
 
-            <div class="quick-links" style="margin-top: 20px;">
-                <span style="color: #888; font-size: 13px; width: 100%; display: block; margin-bottom: 10px;">✨ Click above to explore our complete movie library</span>
+            <div class="quick-links" style="margin-top: 12px;">
+                <span style="color: #888; font-size: 12px; width: 100%; display: block; margin-bottom: 5px;">✨ Click above to explore our complete movie library</span>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p>© 2024 Crixzy | Made with ❤️ for movie lovers</p>
-            <p style="margin-top: 8px; font-size: 12px;">Join our community for latest updates and exclusive content</p>
+            <p style="margin: 0;">© 2024 Crixzy | Made with ❤️ for movie lovers</p>
+            <p style="margin: 5px 0 0 0; font-size: 11px;">Join our community for latest updates and exclusive content</p>
         </div>
     </div>
 
@@ -420,11 +419,11 @@
             // Check if user has seen the popup before
             if (!localStorage.getItem('telegramPopupShown')) {
                 setTimeout(() => {
-                    if (confirm("🚀 Join our Telegram channel for exclusive content and updates!")) {
+                    if (confirm("Join Our Telegram Channel")) {
                         window.open("https://t.me/+OACGYQBHrIJmM2Y1", '_blank');
                     }
                     localStorage.setItem('telegramPopupShown', 'true');
-                }, 2000); // Show after 2 seconds
+                }, 1000); // Show after 1 second
             }
         });
 
