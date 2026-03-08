@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>crixzy⚡</title>
+<title>crixzy�</title>
+
 <style>
 body{
     margin:0;
@@ -105,21 +106,28 @@ body{
 }
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
 <div class="card header">
-crixzy⚡
+crixzy�
 </div>
+
 <div class="video-wrapper">
     <div id="player-container"></div>
 </div>
+
 <div id="errorBox" class="error-box">
 Invalid or unavailable stream ID.
 </div>
+
 <div class="card community">
 <h3>
 Join our community for live updates!
 </h3>
+
 <div class="buttons">
 <a href="https://t.me/+RT_XWFZCSE5kNWU1" class="btn">
 <svg viewBox="0 0 24 24">
@@ -129,59 +137,74 @@ Telegram
 </a>
 </div>
 </div>
+
 <div class="card">
 <h3>Copy Link & Open In Chrome Browser Only</h3>
 <button class="share-btn" id="shareBtn">Share This Page Link</button>
 </div>
+
 </div>
+
 <script>
+
 document.addEventListener("DOMContentLoaded",function(){
+
 // DEFAULT POPUP
 if(confirm("Join For More Links")){
     window.location.href="https://t.me/+RT_XWFZCSE5kNWU1";
     return;
 }
+
 // GET ID PARAM
 const params=new URLSearchParams(window.location.search);
 const id=params.get("id");
+
 const playerContainer=document.getElementById("player-container");
 const errorBox=document.getElementById("errorBox");
+
 if(!id){
     errorBox.style.display="block";
     return;
 }
+
 // FETCH JSON
 fetch("https://allrounderid2.pages.dev/id.json")
 .then(res=>res.json())
 .then(data=>{
+
 if(!data.iframes || !Array.isArray(data.iframes)){
     errorBox.style.display="block";
     return;
 }
+
 const match=data.iframes.find(item=>item.id===id);
+
 if(match && match.iframeSrc){
     playerContainer.innerHTML=`
-        <iframe
-            id="contentFrame"
-            sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
-            allow="encrypted-media"
-            allowfullscreen="true"
-            scrolling="no"
-            src="${match.iframeSrc}">
+        <iframe 
+            src="${match.iframeSrc}" 
+            allow="encrypted-media; autoplay" 
+            allowfullscreen>
         </iframe>
     `;
 }else{
     errorBox.style.display="block";
 }
+
 })
 .catch(()=>{
 errorBox.style.display="block";
 });
+
 document.getElementById("shareBtn").onclick=function(){
 navigator.clipboard.writeText(window.location.href)
 .then(()=>alert("Link Copied"));
 };
+
 });
+
 </script>
+
 </body>
 </html>
+<a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=b3nuw2n1pja7lgut8lhcz6kn6d4kcrz5" border="0" title="free website counter" alt="free website counter"></a>
